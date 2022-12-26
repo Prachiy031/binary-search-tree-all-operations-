@@ -197,7 +197,7 @@ struct abc * delete(struct abc *root,int d)
     {
         struct abc *temp;             //only for node having two childs
         temp = root->right;
-        root->data = inorder_s(temp);
+        root->data = inorder_s(temp);          //we just exchange inorder successor and root->data
         root->right = delete(root->right,root->data);
     }
     return root;
